@@ -5,7 +5,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float sphereCastYPosition = 0.85f;
+    [SerializeField] private LayerMask groundMask;
+    Vector3 spherePos;
+    private float groundYOffset = 0.7f;
 
+    [SerializeField] private float jumpForce = 15f;
 
     [HideInInspector] public float moveSpeed = 1.0f;
     public float walkSpeed = 4.0f;
@@ -13,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     private CharacterController characterController;
+    private PlayerAnimations playerAnimations;
 
     [HideInInspector] public Animator playerAnimator;
 
@@ -42,7 +47,8 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         characterController = GetComponent<CharacterController>();  
-        playerAnimator = GetComponentInChildren<Animator>(); 
+        playerAnimator = GetComponentInChildren<Animator>();
+        playerAnimations = GetComponentInChildren<PlayerAnimations>();
         SwitchState(Walk);
     }
 
@@ -50,10 +56,12 @@ public class PlayerMovement : MonoBehaviour
     {
         HandleGravity();
         HandleMovement();
+        HandleJumping();
         HandleMovementAnimation();
 
         currentState.UpdateState(this);
     }
+
 
     public void SwitchState(BaseMovementState state)
     {
@@ -85,11 +93,20 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void HandleJumping()
+    {
+        if(Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        {
+            Debug.Log("I am here");
+            playerAnimations.Jump();
+            gravityVelocity.y += jumpForce;
+        }
+    }
+
     private bool IsGrounded()
     {
-        Vector3 castPosition = new Vector3(transform.position.x, transform.position.y - sphereCastYPosition, transform.position.z);
-        float radius = 0.2f;
-        if (!Physics.SphereCast(castPosition,radius, Vector3.down, out RaycastHit hit))
+        spherePos = new Vector3(transform.position.x, transform.position.y - groundYOffset, transform.position.z);
+        if(Physics.CheckSphere(spherePos, characterController.radius - 0.05f, groundMask))
         {
             return true;
         }
@@ -98,14 +115,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleGravity()
     {
-        if (IsGrounded())
+        if (!IsGrounded())
         {
-            float initialGravity = -15f;
-            gravityVelocity.y = initialGravity;
+            gravityVelocity.y += gravityScale * Time.deltaTime;
         }
-        else
+        else if(gravityVelocity.y < 0)
         {
-            gravityVelocity.y += gravityScale;
+            gravityVelocity.y = -15f;
         }
 
         characterController.Move(gravityVelocity * Time.deltaTime);
@@ -113,12 +129,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if(characterController == null)
+        if (characterController != null)
         {
-            return;
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(spherePos, characterController.radius - 0.05f);
         }
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(new Vector3(transform.position.x, transform.position.y - sphereCastYPosition, transform.position.z), 0.2f);
     }
 }
 
