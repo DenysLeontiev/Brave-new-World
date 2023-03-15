@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAnimations : MonoBehaviour
 {
     private Animator playerAnimator;
+    [SerializeField] private AnimatorOverrideController playerOverrideController;
 
     [SerializeField] private Transform weaponTransform;
 
@@ -12,7 +13,7 @@ public class PlayerAnimations : MonoBehaviour
     public bool isArmWeapon = false;
     public bool isMeleeWeapon = false;
 
-    private void Start()
+    private void Awake()
     {
         playerAnimator = GetComponentInChildren<Animator>();
     }
@@ -21,9 +22,9 @@ public class PlayerAnimations : MonoBehaviour
     {
         HandleWeaponStates();
 
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            StartCoroutine(Attack());
+            Attack();
         }
     }
 
@@ -45,18 +46,29 @@ public class PlayerAnimations : MonoBehaviour
             return true;
         }
         return false;
+
     }
 
 
-    private IEnumerator Attack()
+    private void Attack()
     {
         if (canAttack && isArmWeapon)
         {
-            canAttack = false;
-            playerAnimator.SetTrigger("armAttack");
-            playerAnimator.SetInteger("armAttackIndex", Random.Range(0, 6));
-            yield return new WaitForSeconds(0.8f);
-            canAttack = true;
+            StartCoroutine(PlayerAttackAnim("armAttack", "armAttackIndex", 0.8f, 6, 0));
         }
+        else if(canAttack && isMeleeWeapon)
+        {
+            StartCoroutine(PlayerAttackAnim("meleeAttack", "meleeAttackIndex", 1f, 5, 0));
+
+        }
+    }
+
+    private IEnumerator PlayerAttackAnim(string triggerName, string triggerIndex, float delay, int maxTriggerIndex, int minTriggerIndex = 0)
+    {
+        canAttack = false;
+        playerAnimator.SetTrigger(triggerName);
+        playerAnimator.SetInteger(triggerIndex, Random.Range(minTriggerIndex, maxTriggerIndex));
+        yield return new WaitForSeconds(delay);
+        canAttack = true;
     }
 }

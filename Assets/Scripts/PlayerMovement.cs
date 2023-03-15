@@ -97,7 +97,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
-            Debug.Log("I am here");
             playerAnimations.Jump();
             gravityVelocity.y += jumpForce;
         }

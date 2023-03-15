@@ -22,16 +22,16 @@ public class PlayerInteraction : MonoBehaviour
             {
                 if(Input.GetKeyDown(KeyCode.E))
                 {
-                    interactableObject.Interact(overlapBoxCenter);
+                    interactableObject.Interact();
                 }
             }
         }
 
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawCube(overlapBoxCenter.position, overlapCubeSize);
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawCube(overlapBoxCenter.position, overlapCubeSize);
+    //}
 }
