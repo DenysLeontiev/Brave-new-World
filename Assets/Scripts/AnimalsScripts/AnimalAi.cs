@@ -3,39 +3,100 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
-using static UnityEngine.UI.Image;
 
 public class AnimalAi : MonoBehaviour
 {
-    private NavMeshAgent navMeshAgent;
+    [HideInInspector] public NavMeshAgent navMeshAgent;
+    [HideInInspector] public Animator animalAnimator;
 
     private float speed;
-    [SerializeField] private float walkSpeed;
-    [SerializeField] private float runSpeed;
+    [SerializeField] private float walkSpeed = 4f;
+    [SerializeField] private float runSpeed = 8f;
 
     [SerializeField] private float maxDistance = 0f;
 
+    [HideInInspector] public BaseAnimalState currentState;
+    [HideInInspector] public AnimalIdle Idle = new AnimalIdle();
+    [HideInInspector] public AnimalWalk Walk = new AnimalWalk();
+    [HideInInspector] public AnimalEat Eat = new AnimalEat();
+    [HideInInspector] public AnimalRun Run = new AnimalRun();
+
+    [HideInInspector] public bool isPlayerNear = false;
+
     private Vector3 randomPosition;
+    private bool hasEaten = true;
 
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        animalAnimator = GetComponent<Animator>();
         randomPosition = FindRandomTargetPosition(transform.position, maxDistance);
+    }
+
+    private void Start()
+    {
+        SwitchState(Walk);
     }
 
     void Update()
     {
+        HandleSpeed();
+        AnimalBehaviour();
+        currentState.UpdateState(this);
+    }
+
+    public void SwitchState(BaseAnimalState state)
+    {
+        currentState = state;
+        currentState.EnterState(this);
+    }
+
+    private void HandleSpeed()
+    {
+        navMeshAgent.speed = animalAnimator.GetBool("run") ? runSpeed : walkSpeed;
+    }
+
+    private void AnimalBehaviour()
+    {
         float distanceToTargetPosition = Vector3.Distance(transform.position, randomPosition);
+
         float minDistance = 2f;
-        if(distanceToTargetPosition < minDistance)
+        if (distanceToTargetPosition < minDistance)
         {
+            StartCoroutine(EatAnimal());
             randomPosition = FindRandomTargetPosition(transform.position, maxDistance);
         }
-        else
+        else if(hasEaten && !isPlayerNear)
         {
             navMeshAgent.SetDestination(randomPosition);
         }
-        //RotateTowards(randomPosition);
+
+        if(isPlayerNear && hasEaten)
+        {
+            randomPosition = FindRandomTargetPosition(transform.position, maxDistance);
+            navMeshAgent.SetDestination(randomPosition);
+            SwitchState(Run);
+        }
+
+        float distanceToPlayer = Vector3.Distance(transform.position, GameObject.FindWithTag("Player").transform.position);
+        float triggerDistance = 15f;
+        if(distanceToPlayer < triggerDistance)
+        {
+            isPlayerNear = true;
+            
+        }
+        else
+        {
+            isPlayerNear = false;
+        }
+    }
+
+    private IEnumerator EatAnimal()
+    {
+        hasEaten= false;
+        SwitchState(Eat);
+        yield return new WaitForSeconds(5);
+        hasEaten = true;
     }
 
     private Vector3 FindRandomTargetPosition(Vector3 center, float maxDistance)  // finds random position on NavMesh by raycasting down a hit on Y-axis

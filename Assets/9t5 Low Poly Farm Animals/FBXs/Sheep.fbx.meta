@@ -1,106 +1,302 @@
 fileFormatVersion: 2
 guid: 683e83343d957ce4bb28b16a932865b4
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Bone
-    100002: Ear1.L
-    100004: Ear1.R
-    100006: Ear2.L
-    100008: Ear2.L_end
-    100010: Ear2.R
-    100012: Ear2.R_end
-    100014: FrontFoot.L
-    100016: FrontFoot.L_end
-    100018: FrontFoot.R
-    100020: FrontFoot.R_end
-    100022: FrontKnee.L
-    100024: FrontKnee.R
-    100026: FrontLeg.L
-    100028: FrontLeg.R
-    100030: FrontShin.L
-    100032: FrontShin.R
-    100034: Head1
-    100036: Head2
-    100038: Head2_end
-    100040: Neck1
-    100042: Neck2
-    100044: RearFoot.L
-    100046: RearFoot.L_end
-    100048: RearFoot.R
-    100050: RearFoot.R_end
-    100052: RearLeg1.L
-    100054: RearLeg1.R
-    100056: RearLeg2.L
-    100058: RearLeg2.R
-    100060: RearShin.L
-    100062: RearShin.R
-    100064: //RootNode
-    100066: Sheep
-    100068: Sheep Skeleton
-    100070: Spine1
-    100072: Spine1_end
-    100074: Spine2
-    100076: Spine3
-    100078: Tail
-    400000: Bone
-    400002: Ear1.L
-    400004: Ear1.R
-    400006: Ear2.L
-    400008: Ear2.L_end
-    400010: Ear2.R
-    400012: Ear2.R_end
-    400014: FrontFoot.L
-    400016: FrontFoot.L_end
-    400018: FrontFoot.R
-    400020: FrontFoot.R_end
-    400022: FrontKnee.L
-    400024: FrontKnee.R
-    400026: FrontLeg.L
-    400028: FrontLeg.R
-    400030: FrontShin.L
-    400032: FrontShin.R
-    400034: Head1
-    400036: Head2
-    400038: Head2_end
-    400040: Neck1
-    400042: Neck2
-    400044: RearFoot.L
-    400046: RearFoot.L_end
-    400048: RearFoot.R
-    400050: RearFoot.R_end
-    400052: RearLeg1.L
-    400054: RearLeg1.R
-    400056: RearLeg2.L
-    400058: RearLeg2.R
-    400060: RearShin.L
-    400062: RearShin.R
-    400064: Sheep
-    400066: //RootNode
-    400068: Sheep Skeleton
-    400070: Spine1
-    400072: Spine1_end
-    400074: Spine2
-    400076: Spine3
-    400078: Tail
-    2100000: Sheep Wool
-    2100002: Sheep Skin
-    2100004: Sheep Hooves
-    2100006: Sheep Eyes
-    2100008: Sheep Nostril
-    2100010: Sheep Ears
-    4300000: Sheep
-    7400000: Idle
-    7400002: Walk
-    7400004: Run
-    7400006: Sit Down
-    7400008: Sitting
-    7400010: Eat
-    7400012: Eat Loop
-    7400014: Ram
-    7400016: Death
-    9500000: //RootNode
-    13700000: Sheep
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Bone
+  - first:
+      1: 100002
+    second: Ear1.L
+  - first:
+      1: 100004
+    second: Ear1.R
+  - first:
+      1: 100006
+    second: Ear2.L
+  - first:
+      1: 100008
+    second: Ear2.L_end
+  - first:
+      1: 100010
+    second: Ear2.R
+  - first:
+      1: 100012
+    second: Ear2.R_end
+  - first:
+      1: 100014
+    second: FrontFoot.L
+  - first:
+      1: 100016
+    second: FrontFoot.L_end
+  - first:
+      1: 100018
+    second: FrontFoot.R
+  - first:
+      1: 100020
+    second: FrontFoot.R_end
+  - first:
+      1: 100022
+    second: FrontKnee.L
+  - first:
+      1: 100024
+    second: FrontKnee.R
+  - first:
+      1: 100026
+    second: FrontLeg.L
+  - first:
+      1: 100028
+    second: FrontLeg.R
+  - first:
+      1: 100030
+    second: FrontShin.L
+  - first:
+      1: 100032
+    second: FrontShin.R
+  - first:
+      1: 100034
+    second: Head1
+  - first:
+      1: 100036
+    second: Head2
+  - first:
+      1: 100038
+    second: Head2_end
+  - first:
+      1: 100040
+    second: Neck1
+  - first:
+      1: 100042
+    second: Neck2
+  - first:
+      1: 100044
+    second: RearFoot.L
+  - first:
+      1: 100046
+    second: RearFoot.L_end
+  - first:
+      1: 100048
+    second: RearFoot.R
+  - first:
+      1: 100050
+    second: RearFoot.R_end
+  - first:
+      1: 100052
+    second: RearLeg1.L
+  - first:
+      1: 100054
+    second: RearLeg1.R
+  - first:
+      1: 100056
+    second: RearLeg2.L
+  - first:
+      1: 100058
+    second: RearLeg2.R
+  - first:
+      1: 100060
+    second: RearShin.L
+  - first:
+      1: 100062
+    second: RearShin.R
+  - first:
+      1: 100064
+    second: //RootNode
+  - first:
+      1: 100066
+    second: Sheep
+  - first:
+      1: 100068
+    second: Sheep Skeleton
+  - first:
+      1: 100070
+    second: Spine1
+  - first:
+      1: 100072
+    second: Spine1_end
+  - first:
+      1: 100074
+    second: Spine2
+  - first:
+      1: 100076
+    second: Spine3
+  - first:
+      1: 100078
+    second: Tail
+  - first:
+      4: 400000
+    second: Bone
+  - first:
+      4: 400002
+    second: Ear1.L
+  - first:
+      4: 400004
+    second: Ear1.R
+  - first:
+      4: 400006
+    second: Ear2.L
+  - first:
+      4: 400008
+    second: Ear2.L_end
+  - first:
+      4: 400010
+    second: Ear2.R
+  - first:
+      4: 400012
+    second: Ear2.R_end
+  - first:
+      4: 400014
+    second: FrontFoot.L
+  - first:
+      4: 400016
+    second: FrontFoot.L_end
+  - first:
+      4: 400018
+    second: FrontFoot.R
+  - first:
+      4: 400020
+    second: FrontFoot.R_end
+  - first:
+      4: 400022
+    second: FrontKnee.L
+  - first:
+      4: 400024
+    second: FrontKnee.R
+  - first:
+      4: 400026
+    second: FrontLeg.L
+  - first:
+      4: 400028
+    second: FrontLeg.R
+  - first:
+      4: 400030
+    second: FrontShin.L
+  - first:
+      4: 400032
+    second: FrontShin.R
+  - first:
+      4: 400034
+    second: Head1
+  - first:
+      4: 400036
+    second: Head2
+  - first:
+      4: 400038
+    second: Head2_end
+  - first:
+      4: 400040
+    second: Neck1
+  - first:
+      4: 400042
+    second: Neck2
+  - first:
+      4: 400044
+    second: RearFoot.L
+  - first:
+      4: 400046
+    second: RearFoot.L_end
+  - first:
+      4: 400048
+    second: RearFoot.R
+  - first:
+      4: 400050
+    second: RearFoot.R_end
+  - first:
+      4: 400052
+    second: RearLeg1.L
+  - first:
+      4: 400054
+    second: RearLeg1.R
+  - first:
+      4: 400056
+    second: RearLeg2.L
+  - first:
+      4: 400058
+    second: RearLeg2.R
+  - first:
+      4: 400060
+    second: RearShin.L
+  - first:
+      4: 400062
+    second: RearShin.R
+  - first:
+      4: 400064
+    second: Sheep
+  - first:
+      4: 400066
+    second: //RootNode
+  - first:
+      4: 400068
+    second: Sheep Skeleton
+  - first:
+      4: 400070
+    second: Spine1
+  - first:
+      4: 400072
+    second: Spine1_end
+  - first:
+      4: 400074
+    second: Spine2
+  - first:
+      4: 400076
+    second: Spine3
+  - first:
+      4: 400078
+    second: Tail
+  - first:
+      21: 2100000
+    second: Sheep Wool
+  - first:
+      21: 2100002
+    second: Sheep Skin
+  - first:
+      21: 2100004
+    second: Sheep Hooves
+  - first:
+      21: 2100006
+    second: Sheep Eyes
+  - first:
+      21: 2100008
+    second: Sheep Nostril
+  - first:
+      21: 2100010
+    second: Sheep Ears
+  - first:
+      43: 4300000
+    second: Sheep
+  - first:
+      74: 7400000
+    second: Idle
+  - first:
+      74: 7400002
+    second: Walk
+  - first:
+      74: 7400004
+    second: Run
+  - first:
+      74: 7400006
+    second: Sit Down
+  - first:
+      74: 7400008
+    second: Sitting
+  - first:
+      74: 7400010
+    second: Eat
+  - first:
+      74: 7400012
+    second: Eat Loop
+  - first:
+      74: 7400014
+    second: Ram
+  - first:
+      74: 7400016
+    second: Death
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Sheep
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -133,7 +329,7 @@ ModelImporter:
       name: Sheep Wool
     second: {fileID: 2100000, guid: 3b0ca2133e9d9164fb5618b6725e0b77, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -142,8 +338,10 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'RightUpperArm' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -162,6 +360,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle
       takeName: Idle
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -190,6 +389,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Walk
       takeName: Walk
+      internalID: 0
       firstFrame: 0
       lastFrame: 29
       wrapMode: 0
@@ -218,6 +418,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Run
       takeName: Run
+      internalID: 0
       firstFrame: 0
       lastFrame: 22
       wrapMode: 0
@@ -246,6 +447,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Sit Down
       takeName: Sit Down
+      internalID: 0
       firstFrame: 0
       lastFrame: 55
       wrapMode: 0
@@ -274,6 +476,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Sitting
       takeName: Sitting
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -302,6 +505,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Eat
       takeName: Eat
+      internalID: 0
       firstFrame: 0
       lastFrame: 80
       wrapMode: 0
@@ -330,6 +534,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Eat Loop
       takeName: Eat Loop
+      internalID: 0
       firstFrame: 0
       lastFrame: 40
       wrapMode: 0
@@ -358,6 +563,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ram
       takeName: Ram
+      internalID: 0
       firstFrame: 0
       lastFrame: 49
       wrapMode: 0
@@ -386,6 +592,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Death
       takeName: Death
+      internalID: 0
       firstFrame: 0
       lastFrame: 50
       wrapMode: 0
@@ -417,36 +624,249 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: Sheep(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sheep Skeleton
+      parentName: Sheep(Clone)
+      position: {x: -0.61516815, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 0.9322649, y: 1, z: 1}
+    - name: Bone
+      parentName: Sheep Skeleton
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0.00000002107343, z: 0.000000021073426, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine1
+      parentName: Bone
+      position: {x: -0.07185677, y: 1.0268105, z: 0.00000013233443}
+      rotation: {x: 0.7071067, y: 0.7071068, z: 0.000000084321776, w: 0.00000010399215}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine1_end
+      parentName: Spine1
+      position: {x: -0, y: 0.47374237, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine2
+      parentName: Bone
+      position: {x: -0.07185677, y: 1.0268105, z: 0.00000013233443}
+      rotation: {x: -0.28162527, y: 0.64860404, z: 0.28162527, w: 0.64860404}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Spine3
+      parentName: Spine2
+      position: {x: -2.2737366e-14, y: 0.37863404, z: -0.000000057220472}
+      rotation: {x: 0.324854, y: -0.0000000603086, z: 0.000000054489004, w: 0.9457642}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Neck1
+      parentName: Spine3
+      position: {x: -2.2737366e-14, y: 0.37026137, z: -0.00000003814697}
+      rotation: {x: 0.15855524, y: 0.00000022634367, z: 0.000000052135448, w: 0.9873501}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Neck2
+      parentName: Neck1
+      position: {x: 5.5138115e-14, y: 0.19955368, z: 0.000000036954784}
+      rotation: {x: 0.018089565, y: -0.00000017343692, z: 0.0000000051238183, w: 0.9998364}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head1
+      parentName: Neck2
+      position: {x: -1.8758327e-14, y: 0.100266375, z: 0.0000000047683435}
+      rotation: {x: 0.09837056, y: 0.00000003035802, z: 0.000000018637287, w: 0.99514985}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Head2
+      parentName: Head1
+      position: {x: -9.094947e-15, y: 0.14356096, z: -0.00000003814702}
+      rotation: {x: -0.75799537, y: -0.000000041028187, z: -0.00000015301704, w: 0.65225995}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Head2_end
+      parentName: Head2
+      position: {x: -0, y: 0.3102057, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ear1.L
+      parentName: Head1
+      position: {x: -9.094947e-15, y: 0.14356096, z: -0.00000003814702}
+      rotation: {x: -0.37994954, y: -0.46478415, z: -0.6191934, w: 0.50617546}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.9999998}
+    - name: Ear2.L
+      parentName: Ear1.L
+      position: {x: -0.000000091200704, y: 0.122445196, z: -0.000000028277622}
+      rotation: {x: 0.26491252, y: 0.00896165, z: 0.0326003, w: 0.96367955}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: Ear2.L_end
+      parentName: Ear2.L
+      position: {x: -0, y: 0.17606814, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ear1.R
+      parentName: Head1
+      position: {x: -9.094947e-15, y: 0.14356096, z: -0.00000003814702}
+      rotation: {x: -0.3834329, y: 0.46191463, z: 0.6153707, w: 0.51081604}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: Ear2.R
+      parentName: Ear1.R
+      position: {x: -0.0000000595699, y: 0.13226049, z: -0.000000034400635}
+      rotation: {x: 0.26497227, y: -0.006970085, z: -0.025354972, w: 0.96389747}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: Ear2.R_end
+      parentName: Ear2.R
+      position: {x: -0, y: 0.17606819, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FrontLeg.R
+      parentName: Spine2
+      position: {x: -2.2737366e-14, y: 0.37863404, z: -0.000000057220472}
+      rotation: {x: -0.3854615, y: -0.3887128, z: 0.5654187, w: 0.6169469}
+      scale: {x: 1, y: 0.99999976, z: 0.9999998}
+    - name: FrontKnee.R
+      parentName: FrontLeg.R
+      position: {x: 0.000000022649765, y: 0.45226252, z: -0.00000005483627}
+      rotation: {x: -0.16854809, y: 0.6755158, z: -0.12031447, w: 0.7076683}
+      scale: {x: 0.9999999, y: 0.9999998, z: 1}
+    - name: FrontShin.R
+      parentName: FrontKnee.R
+      position: {x: 0.000000017818998, y: 0.21764824, z: -0.000000041613855}
+      rotation: {x: -0.000000022351646, y: -0.00000005116459, z: -0.000000004949585, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FrontFoot.R
+      parentName: FrontShin.R
+      position: {x: 0.0000000049610143, y: 0.21764827, z: -0.0000000041210657}
+      rotation: {x: 0.16720353, y: -0.0000009868742, z: 0.00000021654756, w: 0.9859224}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: FrontFoot.R_end
+      parentName: FrontFoot.R
+      position: {x: -0, y: 0.19517179, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FrontLeg.L
+      parentName: Spine2
+      position: {x: -2.2737366e-14, y: 0.37863404, z: -0.000000057220472}
+      rotation: {x: -0.38260117, y: 0.3861516, z: -0.5660462, w: 0.619754}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+    - name: FrontKnee.L
+      parentName: FrontLeg.L
+      position: {x: -0.000000009536743, y: 0.44320273, z: 0.00000004053116}
+      rotation: {x: 0.030479372, y: -0.6137124, z: 0.3047582, w: 0.72770226}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: FrontShin.L
+      parentName: FrontKnee.L
+      position: {x: -0.000000014413707, y: 0.21764831, z: 0.000000026840171}
+      rotation: {x: 0.10821336, y: -0, z: 0.0000001844019, w: 0.9941277}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FrontFoot.L
+      parentName: FrontShin.L
+      position: {x: -0.000000024575897, y: 0.2176482, z: -0.000000016352205}
+      rotation: {x: 0.05340007, y: -0.000000926794, z: 0.00000038969029, w: 0.9985732}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: FrontFoot.L_end
+      parentName: FrontFoot.L
+      position: {x: -0, y: 0.19517179, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail
+      parentName: Sheep Skeleton
+      position: {x: 0.4018856, y: -0.00000013796104, z: 1.0268105}
+      rotation: {x: 0.6990144, y: 0.6895523, z: -0.1066718, w: -0.1565808}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: RearLeg1.R
+      parentName: Tail
+      position: {x: 0.000000003897321, y: 0.27721488, z: -0.00000002788829}
+      rotation: {x: -0.48879987, y: 0.6797439, z: 0.2693889, w: -0.47587037}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RearLeg2.R
+      parentName: RearLeg1.R
+      position: {x: 0.000000029802322, y: 0.36631837, z: -0.000000041872262}
+      rotation: {x: -0.0436339, y: -0.6224031, z: 0.30344662, w: 0.7201601}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: RearShin.R
+      parentName: RearLeg2.R
+      position: {x: 0.000000005427954, y: 0.130497, z: -0.0000000048168283}
+      rotation: {x: 0.00053552544, y: 0.9371776, z: -0.3488522, w: 0.00020042063}
+      scale: {x: 1, y: 0.99999976, z: 1.0000001}
+    - name: RearFoot.R
+      parentName: RearShin.R
+      position: {x: -0.00000001104508, y: 0.34137267, z: 0.00000006309074}
+      rotation: {x: 0.068164736, y: -0.56979305, z: 0.25796592, w: 0.77726644}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RearFoot.R_end
+      parentName: RearFoot.R
+      position: {x: -0, y: 0.16187254, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RearLeg1.L
+      parentName: Tail
+      position: {x: 0.000000003897321, y: 0.27721488, z: -0.00000002788829}
+      rotation: {x: 0.47799805, y: 0.6284041, z: 0.3270593, w: 0.5192865}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+    - name: RearLeg2.L
+      parentName: RearLeg1.L
+      position: {x: -0.000000007152557, y: 0.3663183, z: 0.000000011771917}
+      rotation: {x: -0.04363394, y: 0.62240326, z: -0.30344656, w: 0.72016}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RearShin.L
+      parentName: RearLeg2.L
+      position: {x: -0.000000017450377, y: 0.13049701, z: -0.000000022993667}
+      rotation: {x: -0.045856196, y: 0.9443606, z: -0.325263, w: -0.016857024}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: RearFoot.L
+      parentName: RearShin.L
+      position: {x: 0.000000018807743, y: 0.34137276, z: 0.00000006937861}
+      rotation: {x: -0.0069135465, y: -0.56909674, z: 0.15497361, w: 0.807505}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: RearFoot.L_end
+      parentName: RearFoot.L
+      position: {x: -0, y: 0.16187254, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sheep
+      parentName: Sheep(Clone)
+      position: {x: -0.09705137, y: 0.9119782, z: 0.00000017756331}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 0.9322649, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -454,13 +874,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

@@ -24,13 +24,18 @@ public class PlayerAnimations : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Attack();
+            AttackAnimation();
         }
     }
 
-    public void Jump()
+    public void JumpAnimation()
     {
         playerAnimator.SetTrigger("jump");
+    }
+
+    public void RollAnimation()
+    {
+        playerAnimator.SetTrigger("roll");
     }
 
     private void HandleWeaponStates()
@@ -50,7 +55,7 @@ public class PlayerAnimations : MonoBehaviour
     }
 
 
-    private void Attack()
+    private void AttackAnimation()
     {
         if (canAttack && isArmWeapon)
         {

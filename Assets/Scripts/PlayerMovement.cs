@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public float walkSpeed = 4.0f;
     public float runSpeed = 10.0f;
 
+    [SerializeField] private float rollSpeed = 40f;
+
 
     private CharacterController characterController;
     private PlayerAnimations playerAnimations;
@@ -27,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontalInput;
     private float verticalInput;
+
+    private bool canRoll = true;
 
     #region PlayerRotateRegion
     [SerializeField] private float smoothTime = 0.1f;
@@ -44,8 +48,17 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public RunState Run = new RunState();
     #endregion
 
+
+
+
+    private void Awake()
+    {
+        
+    }
+
     private void Start()
     {
+    
         characterController = GetComponent<CharacterController>();  
         playerAnimator = GetComponentInChildren<Animator>();
         playerAnimations = GetComponentInChildren<PlayerAnimations>();
@@ -57,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
         HandleGravity();
         HandleMovement();
         HandleJumping();
+        //StartCoroutine(HandleRolling());
         HandleMovementAnimation();
 
         currentState.UpdateState(this);
@@ -97,8 +111,21 @@ public class PlayerMovement : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
-            playerAnimations.Jump();
+            playerAnimations.JumpAnimation();
             gravityVelocity.y += jumpForce;
+        }
+    }
+
+    private IEnumerator HandleRolling()
+    {
+        if(Input.GetKeyDown(KeyCode.Q) && canRoll)
+        {
+            canRoll = false;
+            playerAnimations.RollAnimation();
+            Vector3 movement = transform.forward * rollSpeed;
+            characterController.Move(movement);
+            yield return new WaitForSeconds(1.1f);
+            canRoll = true;
         }
     }
 

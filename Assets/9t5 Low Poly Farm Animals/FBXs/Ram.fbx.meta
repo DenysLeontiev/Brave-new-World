@@ -1,106 +1,302 @@
 fileFormatVersion: 2
 guid: 49cc2b19c9a0daa4a84147e21c2c9b15
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Ear1.L
-    100002: Ear1.R
-    100004: Ear2.L
-    100006: Ear2.L_end
-    100008: Ear2.R
-    100010: Ear2.R_end
-    100012: FrontFoot.L
-    100014: FrontFoot.L_end
-    100016: FrontFoot.R
-    100018: FrontFoot.R_end
-    100020: FrontKnee.L
-    100022: FrontKnee.R
-    100024: FrontLeg.L
-    100026: FrontLeg.R
-    100028: FrontShin.L
-    100030: FrontShin.R
-    100032: Head1
-    100034: Head2
-    100036: Head2_end
-    100038: Neck1
-    100040: Neck2
-    100042: //RootNode
-    100044: Ram
-    100046: Ram Skeleton
-    100048: RearFoot.L
-    100050: RearFoot.L_end
-    100052: RearFoot.R
-    100054: RearFoot.R_end
-    100056: RearLeg1.L
-    100058: RearLeg1.R
-    100060: RearLeg2.L
-    100062: RearLeg2.R
-    100064: RearShin.L
-    100066: RearShin.R
-    100068: Spine1
-    100070: Spine1_end
-    100072: Spine2
-    100074: Spine3
-    100076: Tail
-    400000: Ear1.L
-    400002: Ear1.R
-    400004: Ear2.L
-    400006: Ear2.L_end
-    400008: Ear2.R
-    400010: Ear2.R_end
-    400012: FrontFoot.L
-    400014: FrontFoot.L_end
-    400016: FrontFoot.R
-    400018: FrontFoot.R_end
-    400020: FrontKnee.L
-    400022: FrontKnee.R
-    400024: FrontLeg.L
-    400026: FrontLeg.R
-    400028: FrontShin.L
-    400030: FrontShin.R
-    400032: Head1
-    400034: Head2
-    400036: Head2_end
-    400038: Neck1
-    400040: Neck2
-    400042: Ram
-    400044: //RootNode
-    400046: Ram Skeleton
-    400048: RearFoot.L
-    400050: RearFoot.L_end
-    400052: RearFoot.R
-    400054: RearFoot.R_end
-    400056: RearLeg1.L
-    400058: RearLeg1.R
-    400060: RearLeg2.L
-    400062: RearLeg2.R
-    400064: RearShin.L
-    400066: RearShin.R
-    400068: Spine1
-    400070: Spine1_end
-    400072: Spine2
-    400074: Spine3
-    400076: Tail
-    2100000: Ram Wool
-    2100002: Ram Skin
-    2100004: Ram Hooves
-    2100006: Ram Eyes
-    2100008: Ram Nostril
-    2100010: Ram Ears
-    2100012: Ram Horns
-    4300000: Ram
-    7400000: Idle
-    7400002: Walk
-    7400004: Run
-    7400006: Sit Down
-    7400008: Sitting
-    7400010: Eat
-    7400012: Eat Loop
-    7400014: Ram
-    7400016: Death
-    9500000: //RootNode
-    13700000: Ram
-    2186277476908879412: ImportLogs
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Ear1.L
+  - first:
+      1: 100002
+    second: Ear1.R
+  - first:
+      1: 100004
+    second: Ear2.L
+  - first:
+      1: 100006
+    second: Ear2.L_end
+  - first:
+      1: 100008
+    second: Ear2.R
+  - first:
+      1: 100010
+    second: Ear2.R_end
+  - first:
+      1: 100012
+    second: FrontFoot.L
+  - first:
+      1: 100014
+    second: FrontFoot.L_end
+  - first:
+      1: 100016
+    second: FrontFoot.R
+  - first:
+      1: 100018
+    second: FrontFoot.R_end
+  - first:
+      1: 100020
+    second: FrontKnee.L
+  - first:
+      1: 100022
+    second: FrontKnee.R
+  - first:
+      1: 100024
+    second: FrontLeg.L
+  - first:
+      1: 100026
+    second: FrontLeg.R
+  - first:
+      1: 100028
+    second: FrontShin.L
+  - first:
+      1: 100030
+    second: FrontShin.R
+  - first:
+      1: 100032
+    second: Head1
+  - first:
+      1: 100034
+    second: Head2
+  - first:
+      1: 100036
+    second: Head2_end
+  - first:
+      1: 100038
+    second: Neck1
+  - first:
+      1: 100040
+    second: Neck2
+  - first:
+      1: 100042
+    second: //RootNode
+  - first:
+      1: 100044
+    second: Ram
+  - first:
+      1: 100046
+    second: Ram Skeleton
+  - first:
+      1: 100048
+    second: RearFoot.L
+  - first:
+      1: 100050
+    second: RearFoot.L_end
+  - first:
+      1: 100052
+    second: RearFoot.R
+  - first:
+      1: 100054
+    second: RearFoot.R_end
+  - first:
+      1: 100056
+    second: RearLeg1.L
+  - first:
+      1: 100058
+    second: RearLeg1.R
+  - first:
+      1: 100060
+    second: RearLeg2.L
+  - first:
+      1: 100062
+    second: RearLeg2.R
+  - first:
+      1: 100064
+    second: RearShin.L
+  - first:
+      1: 100066
+    second: RearShin.R
+  - first:
+      1: 100068
+    second: Spine1
+  - first:
+      1: 100070
+    second: Spine1_end
+  - first:
+      1: 100072
+    second: Spine2
+  - first:
+      1: 100074
+    second: Spine3
+  - first:
+      1: 100076
+    second: Tail
+  - first:
+      4: 400000
+    second: Ear1.L
+  - first:
+      4: 400002
+    second: Ear1.R
+  - first:
+      4: 400004
+    second: Ear2.L
+  - first:
+      4: 400006
+    second: Ear2.L_end
+  - first:
+      4: 400008
+    second: Ear2.R
+  - first:
+      4: 400010
+    second: Ear2.R_end
+  - first:
+      4: 400012
+    second: FrontFoot.L
+  - first:
+      4: 400014
+    second: FrontFoot.L_end
+  - first:
+      4: 400016
+    second: FrontFoot.R
+  - first:
+      4: 400018
+    second: FrontFoot.R_end
+  - first:
+      4: 400020
+    second: FrontKnee.L
+  - first:
+      4: 400022
+    second: FrontKnee.R
+  - first:
+      4: 400024
+    second: FrontLeg.L
+  - first:
+      4: 400026
+    second: FrontLeg.R
+  - first:
+      4: 400028
+    second: FrontShin.L
+  - first:
+      4: 400030
+    second: FrontShin.R
+  - first:
+      4: 400032
+    second: Head1
+  - first:
+      4: 400034
+    second: Head2
+  - first:
+      4: 400036
+    second: Head2_end
+  - first:
+      4: 400038
+    second: Neck1
+  - first:
+      4: 400040
+    second: Neck2
+  - first:
+      4: 400042
+    second: Ram
+  - first:
+      4: 400044
+    second: //RootNode
+  - first:
+      4: 400046
+    second: Ram Skeleton
+  - first:
+      4: 400048
+    second: RearFoot.L
+  - first:
+      4: 400050
+    second: RearFoot.L_end
+  - first:
+      4: 400052
+    second: RearFoot.R
+  - first:
+      4: 400054
+    second: RearFoot.R_end
+  - first:
+      4: 400056
+    second: RearLeg1.L
+  - first:
+      4: 400058
+    second: RearLeg1.R
+  - first:
+      4: 400060
+    second: RearLeg2.L
+  - first:
+      4: 400062
+    second: RearLeg2.R
+  - first:
+      4: 400064
+    second: RearShin.L
+  - first:
+      4: 400066
+    second: RearShin.R
+  - first:
+      4: 400068
+    second: Spine1
+  - first:
+      4: 400070
+    second: Spine1_end
+  - first:
+      4: 400072
+    second: Spine2
+  - first:
+      4: 400074
+    second: Spine3
+  - first:
+      4: 400076
+    second: Tail
+  - first:
+      21: 2100000
+    second: Ram Wool
+  - first:
+      21: 2100002
+    second: Ram Skin
+  - first:
+      21: 2100004
+    second: Ram Hooves
+  - first:
+      21: 2100006
+    second: Ram Eyes
+  - first:
+      21: 2100008
+    second: Ram Nostril
+  - first:
+      21: 2100010
+    second: Ram Ears
+  - first:
+      21: 2100012
+    second: Ram Horns
+  - first:
+      43: 4300000
+    second: Ram
+  - first:
+      74: 7400000
+    second: Idle
+  - first:
+      74: 7400002
+    second: Walk
+  - first:
+      74: 7400004
+    second: Run
+  - first:
+      74: 7400006
+    second: Sit Down
+  - first:
+      74: 7400008
+    second: Sitting
+  - first:
+      74: 7400010
+    second: Eat
+  - first:
+      74: 7400012
+    second: Eat Loop
+  - first:
+      74: 7400014
+    second: Ram
+  - first:
+      74: 7400016
+    second: Death
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Ram
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -138,7 +334,7 @@ ModelImporter:
       name: Ram Wool
     second: {fileID: 2100000, guid: ad0eeb921869dae4f970e361e780777c, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -147,11 +343,75 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Idle' has import animation warnings that might
+      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
+      retargeting quality.\n\t'Spine3' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\nClip 'Walk' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Spine3' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'FrontLeg.R' has translation
+      animation that will be discarded.\n\t'FrontLeg.L' has translation animation
+      that will be discarded.\n\t'RearLeg1.R' has translation animation that will
+      be discarded.\n\t'RearLeg1.L' has translation animation that will be discarded.\n\nClip
+      'Run' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine3'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'FrontLeg.R'
+      has translation animation that will be discarded.\n\t'FrontKnee.R' has translation
+      animation that will be discarded.\n\t'FrontKnee.L' has translation animation
+      that will be discarded.\n\t'Tail' has translation animation that will be discarded.\n\t'Tail'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sit Down' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine2'
+      has translation animation that will be discarded.\n\t'Spine3' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'FrontLeg.R'
+      has translation animation that will be discarded.\n\t'FrontKnee.R' has translation
+      animation that will be discarded.\n\t'FrontLeg.L' has translation animation
+      that will be discarded.\n\t'FrontKnee.L' has translation animation that will
+      be discarded.\n\t'Tail' has translation animation that will be discarded.\n\t'Tail'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'RearLeg1.R'
+      has translation animation that will be discarded.\n\t'RearLeg2.R' has translation
+      animation that will be discarded.\n\t'RearLeg2.R' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'RearLeg1.L' has translation
+      animation that will be discarded.\n\t'RearLeg2.L' has translation animation
+      that will be discarded.\n\t'RearLeg2.L' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\nClip 'Sitting' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Spine3' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\nClip 'Eat'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine3'
+      has translation animation that will be discarded.\n\t'Spine3' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Ram' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine2'
+      has translation animation that will be discarded.\n\t'Spine3' has translation
+      animation that will be discarded.\n\t'Spine3' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'FrontLeg.R' has translation
+      animation that will be discarded.\n\t'FrontLeg.L' has translation animation
+      that will be discarded.\n\t'Tail' has translation animation that will be discarded.\n\t'Tail'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'RearLeg1.R'
+      has translation animation that will be discarded.\n\t'RearLeg1.L' has translation
+      animation that will be discarded.\n\nClip 'Death' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Spine2' has translation animation that
+      will be discarded.\n\t'Spine3' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Neck2' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'FrontLeg.R' has translation
+      animation that will be discarded.\n\t'FrontKnee.R' has translation animation
+      that will be discarded.\n\t'FrontLeg.L' has translation animation that will
+      be discarded.\n\t'FrontKnee.L' has translation animation that will be discarded.\n\t'Tail'
+      has translation animation that will be discarded.\n\t'Tail' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'RearLeg1.R'
+      has translation animation that will be discarded.\n\t'RearLeg2.R' has translation
+      animation that will be discarded.\n\t'RearLeg2.R' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'RearLeg2.L' has translation
+      animation that will be discarded.\n\t'RearLeg2.L' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -167,6 +427,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle
       takeName: Idle
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -195,6 +456,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Walk
       takeName: Walk
+      internalID: 0
       firstFrame: 0
       lastFrame: 29
       wrapMode: 0
@@ -223,6 +485,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Run
       takeName: Run
+      internalID: 0
       firstFrame: 0
       lastFrame: 22
       wrapMode: 0
@@ -251,6 +514,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Sit Down
       takeName: Sit Down
+      internalID: 0
       firstFrame: 0
       lastFrame: 55
       wrapMode: 0
@@ -279,6 +543,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Sitting
       takeName: Sitting
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -307,6 +572,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Eat
       takeName: Eat
+      internalID: 0
       firstFrame: 0
       lastFrame: 80
       wrapMode: 0
@@ -335,6 +601,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Eat Loop
       takeName: Eat Loop
+      internalID: 0
       firstFrame: 0
       lastFrame: 40
       wrapMode: 0
@@ -363,6 +630,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Ram
       takeName: Ram
+      internalID: 0
       firstFrame: 0
       lastFrame: 49
       wrapMode: 0
@@ -391,6 +659,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Death
       takeName: Death
+      internalID: 0
       firstFrame: 0
       lastFrame: 50
       wrapMode: 0
@@ -422,36 +691,244 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: Ram(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ram Skeleton
+      parentName: Ram(Clone)
+      position: {x: -0.61516815, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 0.9322649, y: 1, z: 1}
+    - name: Spine1
+      parentName: Ram Skeleton
+      position: {x: -0.07185677, y: -0.00000013661744, z: 1.0268105}
+      rotation: {x: 0.50000006, y: 0.49999994, z: 0.5, w: -0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine1_end
+      parentName: Spine1
+      position: {x: -0, y: 0.47374237, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine2
+      parentName: Ram Skeleton
+      position: {x: -0.07185677, y: -0.00000013661744, z: 1.0268105}
+      rotation: {x: 0.25949305, y: 0.2594932, z: 0.6577716, w: 0.6577714}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine3
+      parentName: Spine2
+      position: {x: -3.9790393e-15, y: 0.37863404, z: 0.000000023841846}
+      rotation: {x: 0.32485396, y: -0.00000005139771, z: 0.000000050356398, w: 0.9457642}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Neck1
+      parentName: Spine3
+      position: {x: -4.5474734e-15, y: 0.37026152, z: 4.2632563e-16}
+      rotation: {x: 0.15855525, y: 0.00000022634367, z: 0.00000005213543, w: 0.9873501}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Neck2
+      parentName: Neck1
+      position: {x: -5.5138115e-14, y: 0.1995536, z: -0.000000036954976}
+      rotation: {x: 0.018089565, y: -0.00000017343687, z: 0.0000000051238267, w: 0.9998364}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head1
+      parentName: Neck2
+      position: {x: -2.6716407e-14, y: 0.10026634, z: -0.0000000047684017}
+      rotation: {x: 0.09837054, y: 0.000000030358006, z: 0.000000018637285, w: 0.99514985}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head2
+      parentName: Head1
+      position: {x: -4.5474732e-14, y: 0.14356092, z: -5.1443292e-14}
+      rotation: {x: -0.75799555, y: -0.000000041028223, z: -0.00000015301715, w: 0.6522597}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head2_end
+      parentName: Head2
+      position: {x: -0, y: 0.3102057, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ear1.L
+      parentName: Head1
+      position: {x: -4.5474732e-14, y: 0.14356092, z: -5.1443292e-14}
+      rotation: {x: -0.37994972, y: -0.46478418, z: -0.6191934, w: 0.5061754}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.9999999}
+    - name: Ear2.L
+      parentName: Ear1.L
+      position: {x: 0.000000022289786, y: 0.122445196, z: -0.000000029796746}
+      rotation: {x: 0.26491252, y: 0.008961721, z: 0.032600258, w: 0.96367955}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Ear2.L_end
+      parentName: Ear2.L
+      position: {x: -0, y: 0.17606814, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ear1.R
+      parentName: Head1
+      position: {x: -4.5474732e-14, y: 0.14356092, z: -5.1443292e-14}
+      rotation: {x: -0.38343304, y: 0.4619147, z: 0.6153707, w: 0.51081586}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Ear2.R
+      parentName: Ear1.R
+      position: {x: -0.00000006045533, y: 0.13226049, z: 0.000000018316273}
+      rotation: {x: 0.2649723, y: -0.006970217, z: -0.025354931, w: 0.9638974}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ear2.R_end
+      parentName: Ear2.R
+      position: {x: -0, y: 0.17606819, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FrontLeg.R
+      parentName: Spine2
+      position: {x: -3.9790393e-15, y: 0.37863404, z: 0.000000023841846}
+      rotation: {x: -0.30815262, y: 0.33682325, z: 0.88326293, w: -0.10695167}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: FrontKnee.R
+      parentName: FrontLeg.R
+      position: {x: 0.000000014305114, y: 0.45226246, z: 0.000000014305114}
+      rotation: {x: -0.021466188, y: 0.69269943, z: 0.003805928, w: 0.72089684}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: FrontShin.R
+      parentName: FrontKnee.R
+      position: {x: -0.0000000081930445, y: 0.21764821, z: 0.000000046251333}
+      rotation: {x: -0.000000052154068, y: -0.000000018568183, z: -0.000000036447375, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FrontFoot.R
+      parentName: FrontShin.R
+      position: {x: -0.000000013511978, y: 0.21764825, z: 0.00000003028621}
+      rotation: {x: 0.16720362, y: -0.0000009882482, z: 0.00000022799246, w: 0.9859224}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: FrontFoot.R_end
+      parentName: FrontFoot.R
+      position: {x: -0, y: 0.19517179, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FrontLeg.L
+      parentName: Spine2
+      position: {x: -3.9790393e-15, y: 0.37863404, z: 0.000000023841846}
+      rotation: {x: -0.2891743, y: 0.57543087, z: -0.23160319, w: 0.72912115}
+      scale: {x: 0.9999999, y: 0.99999976, z: 0.99999994}
+    - name: FrontKnee.L
+      parentName: FrontLeg.L
+      position: {x: 0.00000002503395, y: 0.44320297, z: -0.000000022351742}
+      rotation: {x: -0.013651876, y: -0.689021, z: 0.014638806, w: 0.72446495}
+      scale: {x: 0.99999994, y: 0.9999998, z: 0.9999999}
+    - name: FrontShin.L
+      parentName: FrontKnee.L
+      position: {x: 0.000000017918358, y: 0.2176483, z: 0.000000033718024}
+      rotation: {x: 0.000000010244492, y: 0.0000000643194, z: -0.000000027953877, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FrontFoot.L
+      parentName: FrontShin.L
+      position: {x: 0.000000008283419, y: 0.21764827, z: -0.000000011076263}
+      rotation: {x: 0.16720355, y: -0.0000009855328, z: 0.00000022461657, w: 0.9859224}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FrontFoot.L_end
+      parentName: FrontFoot.L
+      position: {x: -0, y: 0.19517179, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail
+      parentName: Ram Skeleton
+      position: {x: 0.4018856, y: -0.00000013796104, z: 1.0268105}
+      rotation: {x: 0.6990144, y: 0.6895523, z: -0.1066718, w: -0.1565808}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: RearLeg1.R
+      parentName: Tail
+      position: {x: 0.000000003897321, y: 0.27721488, z: -0.00000002788829}
+      rotation: {x: -0.48879987, y: 0.6797439, z: 0.2693889, w: -0.47587037}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RearLeg2.R
+      parentName: RearLeg1.R
+      position: {x: 0.000000029802322, y: 0.36631837, z: -0.000000041872262}
+      rotation: {x: -0.0436339, y: -0.6224031, z: 0.30344662, w: 0.7201601}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: RearShin.R
+      parentName: RearLeg2.R
+      position: {x: 0.000000005427954, y: 0.130497, z: -0.0000000048168283}
+      rotation: {x: 0.00053552544, y: 0.9371776, z: -0.3488522, w: 0.00020042063}
+      scale: {x: 1, y: 0.99999976, z: 1.0000001}
+    - name: RearFoot.R
+      parentName: RearShin.R
+      position: {x: -0.00000001104508, y: 0.34137267, z: 0.00000006309074}
+      rotation: {x: 0.068164736, y: -0.56979305, z: 0.25796592, w: 0.77726644}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RearFoot.R_end
+      parentName: RearFoot.R
+      position: {x: -0, y: 0.16187254, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RearLeg1.L
+      parentName: Tail
+      position: {x: 0.000000003897321, y: 0.27721488, z: -0.00000002788829}
+      rotation: {x: 0.47799805, y: 0.6284041, z: 0.3270593, w: 0.5192865}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+    - name: RearLeg2.L
+      parentName: RearLeg1.L
+      position: {x: -0.000000007152557, y: 0.3663183, z: 0.000000011771917}
+      rotation: {x: -0.04363394, y: 0.62240326, z: -0.30344656, w: 0.72016}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RearShin.L
+      parentName: RearLeg2.L
+      position: {x: -0.000000017450377, y: 0.13049701, z: -0.000000022993667}
+      rotation: {x: -0.045856196, y: 0.9443606, z: -0.325263, w: -0.016857024}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: RearFoot.L
+      parentName: RearShin.L
+      position: {x: 0.000000018807743, y: 0.34137276, z: 0.00000006937861}
+      rotation: {x: -0.0069135465, y: -0.56909674, z: 0.15497361, w: 0.807505}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: RearFoot.L_end
+      parentName: RearFoot.L
+      position: {x: -0, y: 0.16187254, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ram
+      parentName: Ram(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -459,13 +936,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
