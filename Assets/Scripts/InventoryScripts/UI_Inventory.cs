@@ -8,17 +8,31 @@ using UnityEngine.UI;
 
 public class UI_Inventory : MonoBehaviour
 {
+    [SerializeField] private Transform spawnObjectTransform;
+
     private Transform player;
 
     private Inventory inventory;
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
+    private Transform emptySlotTemplate;
+    private Transform emtySlotParent;
 
     private void Start()
     {
         player = FindObjectOfType<PlayerInteraction>().GetComponent<Transform>();
         itemSlotContainer = transform.Find("itemSlotContainer");
         itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
+        //emtySlotParent = itemSlotContainer.Find("emtySlotParent");
+        emtySlotParent = transform.Find("emtySlotParent");
+        emptySlotTemplate = emtySlotParent.Find("emptySlotTemplate");
+
+        RefreshEmptyInventorySlots();
+    }
+
+    private void Update()
+    {
+        RefreshEmptyInventorySlots();
     }
 
     public void SetInventory(Inventory inventory)
@@ -33,12 +47,15 @@ public class UI_Inventory : MonoBehaviour
     private void Inventory_OnItemAdded(object sender, System.EventArgs e)
     {
         RefreshInventory();
+        RefreshEmptyInventorySlots();
     }
 
     private void RefreshInventory()
     {
+        if (itemSlotContainer == null) return;
         foreach (Transform child in itemSlotContainer)
         {
+            if (child.parent == emptySlotTemplate) continue;
             if(child == itemSlotTemplate)
             {
                 continue;
@@ -48,34 +65,38 @@ public class UI_Inventory : MonoBehaviour
 
         int x = 0;
         int y = 0;
-        float cellSize = 110f;
-        foreach (ItemWorld item in inventory.GetItems())
+        float cellSize = 100f;
+        foreach (ItemWorld itemWorld in inventory.GetItems())
         {
-            Debug.Log("Test item: " + item);
             RectTransform itemTemplateRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemTemplateRectTransform.gameObject.SetActive(true);
 
-            itemTemplateRectTransform.GetComponent<Button_UI>().ClickFunc = () => // Left Mouse Click Func
+            //itemTemplateRectTransform.GetComponent<Button_UI>().ClickFunc = () => // Left Mouse Click Func
+            //{
+            //    inventory.UseItem(itemWorld);
+            //};
+
+            itemTemplateRectTransform.GetComponent<Button_UI>().MouseMiddleClickFunc = () =>
             {
-                Debug.Log("Use item");
+                inventory.UseItem(itemWorld); ;
             };
 
             itemTemplateRectTransform.GetComponent<Button_UI>().MouseRightClickFunc = () => // Right Mouse Click Func
             {
                 //Debug.Log("Remove item");
-                DropItem(item, player);
-                inventory.RemoveItem(item);
+                DropItem(itemWorld, player);
+                inventory.RemoveItem(itemWorld);
             };
 
             itemTemplateRectTransform.anchoredPosition = new Vector2(x * cellSize, -y * cellSize);
 
             Image templateImage = itemTemplateRectTransform.Find("image").GetComponent<Image>();
-            templateImage.sprite = item.GetSprite();
+            templateImage.sprite = itemWorld.GetSprite();
 
             TextMeshProUGUI amountText = itemTemplateRectTransform.Find("amount").GetComponent<TextMeshProUGUI>();
-            if(item.item.amount > 1)
+            if(itemWorld.item.amount > 1)
             {
-                amountText.SetText(item.item.amount.ToString());
+                amountText.SetText(itemWorld.item.amount.ToString());
             }
             else
             {
@@ -95,11 +116,6 @@ public class UI_Inventory : MonoBehaviour
 
     private void DropItem(ItemWorld item, Transform player)
     {
-        float xOffset = 5f;
-        float yOffset = 6f;
-        float zOffset = 2f;
-        Vector3 spawnPos = new Vector3(transform.position.x + xOffset, transform.position.y + yOffset, transform.position.z + zOffset);
-
         switch (item.item.itemType)
         {
             case Item.ItemType.Sword:
@@ -109,6 +125,7 @@ public class UI_Inventory : MonoBehaviour
                 SpawnObject(ItemAssests.Instance.ApplePrefab, item, player);
                 break;
             case Item.ItemType.Wood:
+                SpawnObject(ItemAssests.Instance.WoodPrefab, item, player);
                 //TODO: Finish implemetation of Dropping items out of inventories
                 break;
             case Item.ItemType.Object:
@@ -118,9 +135,41 @@ public class UI_Inventory : MonoBehaviour
         }
     }
 
+    List<Transform> emptySlots = new List<Transform>();
+    private void RefreshEmptyInventorySlots()
+    {
+        int rowX = 5;
+        int columnY = 3;
+        float cellSize = 100f;
+
+        if(emptySlots.Count >= rowX * columnY)
+        {
+            return;
+        }
+
+        for (int x = 0; x < rowX; x++)
+        {
+            for (int y = 0; y < columnY; y++)
+            {
+                var emptySlot = Instantiate(emptySlotTemplate, emtySlotParent);
+                emptySlots.Add(emptySlot);  
+                emptySlot.gameObject.SetActive(true);
+                emptySlot.GetComponent<RectTransform>().anchoredPosition = new Vector2(x * cellSize, -y * cellSize);
+            }
+        }
+    }
+
     private void SpawnObject(GameObject objectPrefab, ItemWorld item, Transform player)
     {
-        GameObject spawnedItem = Instantiate(objectPrefab, player.position, Quaternion.identity);
+        float xOffset = 0f;
+        float yOffset = 0f;
+        float zOffset = 0f;
+        Vector3 spawnPos = new Vector3(player.transform.position.x + xOffset, player.transform.position.y
+            + yOffset, player.transform.forward.z + player.transform.position.z + zOffset);
+
+        GameObject spawnedItem = Instantiate(objectPrefab, spawnPos, Quaternion.identity);
         spawnedItem.AddComponent<Rigidbody>();
+        //Rigidbody spawnedObjectRigidbody = spawnedItem.GetComponent<Rigidbody>();
+        //spawnedObjectRigidbody.AddForce(new Vector3(0, 0, 0f));
     }
 }

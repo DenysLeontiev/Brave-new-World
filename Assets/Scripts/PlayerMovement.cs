@@ -17,6 +17,18 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float rollSpeed = 40f;
 
+    [SerializeField] private AudioSource stepSFX = default;
+    [SerializeField] private AudioClip[] grassFootsteps;
+    private float baseStepSpeed = 0.5f;
+    private float runStepMultiplayer = 0.6f;
+    private float walkStepMultiplayer = 1.2f;
+    private float footstepTime = 0.0f;
+    private float GetFootstepsOffset => isWalking ? baseStepSpeed * walkStepMultiplayer : baseStepSpeed * runStepMultiplayer;
+
+
+    private bool isWalking;
+    private bool isRunning;
+
 
     private CharacterController characterController;
     private PlayerAnimations playerAnimations;
@@ -48,14 +60,6 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public RunState Run = new RunState();
     #endregion
 
-
-
-
-    private void Awake()
-    {
-        
-    }
-
     private void Start()
     {
     
@@ -69,13 +73,40 @@ public class PlayerMovement : MonoBehaviour
     {
         HandleGravity();
         HandleMovement();
+        HandleFootsteps();
         HandleJumping();
         //StartCoroutine(HandleRolling());
         HandleMovementAnimation();
 
+        HandleStateMovement();
+
         currentState.UpdateState(this);
     }
 
+    private void HandleStateMovement()
+    {
+        if (currentState == Run && moveDirection != Vector3.zero) 
+        {
+            isWalking = false;
+            isRunning = true;
+            return;
+        }
+
+        if(currentState == Walk && moveDirection != Vector3.zero)
+        {
+            isRunning = false;
+            isWalking = true;
+            return;
+        }
+        else
+        {
+            isRunning = false;
+            isWalking = false;
+            return;
+        }
+
+
+    }
 
     public void SwitchState(BaseMovementState state)
     {
@@ -88,7 +119,6 @@ public class PlayerMovement : MonoBehaviour
         playerAnimator.SetFloat("horizontalInput", horizontalInput);
         playerAnimator.SetFloat("verticalInput", verticalInput);
     }
-
     private void HandleMovement()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
@@ -105,6 +135,26 @@ public class PlayerMovement : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
             characterController.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
         }
+    }
+
+        private void HandleFootsteps()
+        {
+            if(!characterController.isGrounded)
+            {
+                return;
+            }
+            if(moveDirection == Vector3.zero)
+            {
+                return;
+            }
+
+            footstepTime -= Time.deltaTime;
+            if (footstepTime <= 0)
+            {
+                stepSFX.PlayOneShot(grassFootsteps[Random.Range(0, grassFootsteps.Length - 1)]);
+            }
+
+            footstepTime = GetFootstepsOffset;
     }
 
     private void HandleJumping()

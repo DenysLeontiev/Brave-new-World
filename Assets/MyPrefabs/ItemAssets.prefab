@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2855719521700821592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2855719521700821594}
+  - component: {fileID: 2855719521700821597}
+  m_Layer: 0
+  m_Name: ItemAssets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2855719521700821594
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2855719521700821592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 689.4429, y: 496.72, z: 239.68663}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2855719521700821597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2855719521700821592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc4c111f88efc434abb6913651d993c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeakSwordPrefab: {fileID: 844846095959820594, guid: c274bac05e5feec45a90494a73ad2605, type: 3}
+  ApplePrefab: {fileID: 4684010915467506097, guid: 5fe8158f8136ffb479ed6323ec591b8b, type: 3}
+  WoodPrefab: {fileID: 243839457461039508, guid: 8b7e4f81bc46f534c8dfceb254391c84, type: 3}
+  appleSprite: {fileID: 21300000, guid: 5d9ba4e7d0964044ea54abe409d81dfd, type: 3}
+  swordSprite: {fileID: 21300000, guid: 5fd50594014b70e48bd6993443d46b32, type: 3}
+  woodSprite: {fileID: 21300000, guid: 9adc7a07d6c9b8643b33b61ee1a10b7b, type: 3}
+  objectSprite: {fileID: 21300000, guid: ce94588f3e8a17d4fbcd6fc79859aecd, type: 3}

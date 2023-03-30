@@ -8,11 +8,13 @@ using static UnityEditor.Progress;
 public class Inventory
 {
     public event EventHandler OnItemAdded;
+    private Action<ItemWorld> OnItemUse;
 
     public List<ItemWorld> itemWorldsList;
-    public Inventory()
+    public Inventory(Action<ItemWorld> OnItemUse)
     {
         itemWorldsList = new List<ItemWorld>();
+        this.OnItemUse = OnItemUse;
     }
 
     public void AddItem(ItemWorld item)
@@ -47,39 +49,10 @@ public class Inventory
         }
 
         OnItemAdded?.Invoke(null, EventArgs.Empty);
-
-        //itemWorldsList.Add(item);
-
-        //if (item.item.isStackable)
-        //{
-        //    bool isAlreadyInInvetory = false;
-        //    foreach (ItemWorld inventoryItem in itemWorldsList)
-        //    {
-        //        if (inventoryItem.item.itemType == item.item.itemType)
-        //        {
-        //            Debug.Log("Just ADD");
-        //            inventoryItem.item.amount += item.item.amount;
-        //            isAlreadyInInvetory = true;
-        //        }
-        //    }
-        //    if (!isAlreadyInInvetory)
-        //    {
-        //        Debug.Log("Add first stackable");
-        //        itemWorldsList.Add(item);
-        //    }
-        //}
-        //else
-        //{
-        //    Debug.Log("Add Last");
-        //    itemWorldsList.Add(item);
-        //}
-
-        //OnItemAdded?.Invoke(null, EventArgs.Empty);
     }
 
     public void RemoveItem(ItemWorld item)
     {
-        Debug.Log(item.item.amount);
         if (item.item.isStackable)
         {
             Item itemInInvetory = null;
@@ -104,9 +77,13 @@ public class Inventory
         OnItemAdded?.Invoke(null, EventArgs.Empty);
     }
 
-    public void DropItem(ItemWorld item, Vector3 position, Transform parent)
+    public void UseItem(ItemWorld itemWorld)
     {
-        
+        if (PlayerInteraction.canEquipMelee) // if WeaponPosition is not empty,so we dont remove from inventory 
+        {
+            RemoveItem(itemWorld);
+            OnItemUse(itemWorld);
+        }
     }
 
     public List<ItemWorld> GetItems()

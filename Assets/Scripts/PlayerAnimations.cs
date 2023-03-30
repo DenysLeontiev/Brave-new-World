@@ -59,11 +59,13 @@ public class PlayerAnimations : MonoBehaviour
     {
         if (canAttack && isArmWeapon)
         {
-            StartCoroutine(PlayerAttackAnim("armAttack", "armAttackIndex", 0.8f, 6, 0));
+            float armAttackDelay = 0.8f; 
+            StartCoroutine(PlayerAttackAnim("armAttack", "armAttackIndex", armAttackDelay, 6, 0));
         }
         else if(canAttack && isMeleeWeapon)
         {
-            StartCoroutine(PlayerAttackAnim("meleeAttack", "meleeAttackIndex", 1f, 5, 0));
+            float meleeAttackDelay = 0.8f;
+            StartCoroutine(PlayerAttackAnim("meleeAttack", "meleeAttackIndex", meleeAttackDelay, 5, 0));
 
         }
     }
